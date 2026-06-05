@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-['Inter'] bg-[#0f172a] text-slate-300;
+  }
+  h1, h2, h3, h4 {
+    @apply font-['Outfit'] text-white;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  .glass-card {
+    @apply bg-slate-800/40 backdrop-blur-md border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-300 rounded-2xl p-6;
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2.5 px-6 rounded-xl transition-all active:scale-95 shadow-lg shadow-cyan-900/40 flex items-center justify-center gap-2;
+  }
+  
+  .btn-outline {
+    @apply relative border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2;
+  }
+
+  .nav-link {
+    @apply relative text-slate-400 hover:text-white transition-all duration-300 cursor-pointer;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute -bottom-1 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300;
+  }
+
+  .nav-active {
+    @apply text-cyan-400 font-medium;
+  }
+
+  .nav-active::after {
+    @apply w-full;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
