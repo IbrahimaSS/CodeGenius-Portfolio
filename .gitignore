@@ -1,1 +1,19 @@
+# Dependencies
+node_modules
+dist
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+
+# Vercel
 .vercel
+
+# System
+.DS_Store
+Thumbs.db
