@@ -97,7 +97,7 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-          <a href="/cv.pdf" download className="btn-primary w-full sm:w-auto group">
+          <a href="/CodeGenius.pdf" download className="btn-primary w-full sm:w-auto group">
             <Icons.Download /> Télécharger mon CV
             <span className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12" />
           </a>
